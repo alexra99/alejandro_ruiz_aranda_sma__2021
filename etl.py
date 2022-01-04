@@ -264,7 +264,7 @@ class ExtractAgent(Agent):
 class TransformAgent(Agent):
     def load_pre(df):    
         try:
-            client = MongoClient('localhost')
+            client = MongoClient('host.docker.internal')
         except Exception:
             logging.error('Error in Db connection')      
         db = client['ETL-empleos']
@@ -345,7 +345,7 @@ class TransformAgent(Agent):
 class LoadAgent(Agent):
     def load(df):
         try:
-            client = MongoClient('localhost')
+            client = MongoClient('host.docker.internal')
         except Exception:
             logging.error('Error in Db connection')      
         db = client['ETL-empleos']
@@ -370,12 +370,14 @@ class LoadAgent(Agent):
                 
                 df_load.to_csv('jobs_search.csv' )
                 await self.agent.stop()
-                print("LOADER AGENT FINISH")
+                logging.info("LOADER AGENT FINISH")
                 
             else:
                 print("Did not received any message after 250 seconds")
-            await self.agent.stop()
-            print("LOADER AGENT FINISH")
+                await self.agent.stop()
+                logging.info("LOADER AGENT FINISH")
+                
+    
     
     async def setup(self):
         print("LOADER AGENT:"+str(self.jid)+ "READY")
@@ -411,7 +413,7 @@ def main():
             loadagent.stop()
             
             break
-    print("Agents finalizados")
+    print("Agents finished")
 
 if __name__ == "__main__":
     main()
