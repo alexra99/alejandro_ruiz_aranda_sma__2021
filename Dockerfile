@@ -1,6 +1,6 @@
 FROM python:3.9-slim-bullseye
 
-ENV VIRTUAL_ENV=C:/Users/aleja/Desktop/envs/dev_sma
+ENV VIRTUAL_ENV=dev_sma
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 

@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: b64
+Version: 0.4
+Summary: convert html/local/online data to base64 fast, easy and clean
+Home-page: https://github.com/n0x1s/b64
+Author: n0x1s
+Author-email: n0x1s0x01@gmail.com
+License: MIT
+Download-URL: https://github.com/N0x1s/b64/archive/0.4.tar.gz
+Description: UNKNOWN
+Keywords: base64,image to base64,video to base64,base64 convert,html to base64,data uri
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
